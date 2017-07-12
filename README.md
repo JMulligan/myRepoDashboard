@@ -1,13 +1,22 @@
 # myRepoDashboard
+Make sure you have installed:
 
-``bash
+- MongoDB
+- ExpressJS
+- NodeJS
+- NPM
+
+
+In order to start the env run the following commands on your env:
+
+``
 npm install
 ``
 
-``bash
+``
 bower install
 ``
 
-``bash
+``
 gulp
 ``
