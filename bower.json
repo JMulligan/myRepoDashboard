@@ -1,6 +1,6 @@
 {
-  "name": "CoreUI",
-  "version": "1.0.0-alpha.5 (AngularJS)",
+  "name": "myDashboard",
+  "version": "0.0.1",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "jquery": "^3.0.0",

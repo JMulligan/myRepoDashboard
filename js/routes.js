@@ -8,7 +8,7 @@ angular
     // Set to true if you want to see what and when is dynamically loaded
     debug: true
   });
-
+  // Breadcrum init
   $breadcrumbProvider.setOptions({
     prefixStateName: 'app.main',
     includeAbstract: true,
@@ -53,8 +53,6 @@ angular
   .state('app.main', {
     url: '/dashboard',
     templateUrl: 'views/main.html',
-    title: 'Test Title',
-    
     //page title goes here
     ncyBreadcrumb: {
       label: 'Home',

@@ -11,6 +11,7 @@ angular
 .controller('barChartCtrl', barChartCtrl)
 .controller('horizontalBarsCtrl', horizontalBarsCtrl)
 .controller('horizontalBarsType2Ctrl', horizontalBarsType2Ctrl)
+.controller('footerCtrl', footerCtrl)
 .controller('usersTableCtrl', usersTableCtrl);
 
 //convert Hex to RGBA
@@ -22,6 +23,12 @@ function convertHex(hex,opacity){
 
   result = 'rgba('+r+','+g+','+b+','+opacity/100+')';
   return result;
+}
+footerCtrl.$inject = ['$scope'];
+function footerCtrl($scope){
+  $scope.date = new Date();
+  $scope.businessName = 'Replace Me with Business Name';
+  $scope.businessUrl = 'http://www.acme.com'
 }
 
 cardChartCtrl1.$inject = ['$scope'];
