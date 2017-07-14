@@ -4,10 +4,27 @@ angular
   $stateProvider
   // Start: Newly addded Routes Route
   .state('app.create-client', {
-    url: "/createclient",
+    url: '/createclient',
     templateUrl: 'create-client/create-client.template.html',
     ncyBreadcrumb: {
       label: 'Create Client'
+    },
+    resolve: {
+      // Plugins loaded before
+      // loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
+      //     return $ocLazyLoad.load([
+      //         {
+      //             serial: true,
+      //             files: ['js/libs/Chart.min.js', 'js/libs/angular-chart.min.js']
+      //         }
+      //     ]);
+      // }],
+      loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+        // you can lazy load files for an existing module
+        return $ocLazyLoad.load({
+          files: ['../create-client/create-client.controller.js']
+        });
+      }]
     }
   })
 
