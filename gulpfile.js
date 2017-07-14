@@ -27,7 +27,7 @@ gulp.task('serve', ['sass'], function() {
 
     gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch('**/*.html').on('change', browserSync.reload);
-    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('components/**/*.js').on('change', browserSync.reload);
 
 });
 
@@ -40,7 +40,7 @@ gulp.task('serve:lite', function() {
 
     gulp.watch('**/*.css').on('change', browserSync.reload);
     gulp.watch('**/*.html').on('change', browserSync.reload);
-    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('components/**/*.js').on('change', browserSync.reload);
 
 });
 
@@ -82,9 +82,9 @@ gulp.task('copy:fonts', function() {
    .pipe(gulp.dest(paths.dist+'/fonts'));
 });
 
-gulp.task('copy:js', function() {
-   return gulp.src('./js/**/*')
-   .pipe(gulp.dest(paths.dist+'/js'));
+gulp.task('copy:components', function() {
+   return gulp.src('./components/**/*')
+   .pipe(gulp.dest(paths.dist+'/components'));
 });
 
 gulp.task('copy:views', function() {

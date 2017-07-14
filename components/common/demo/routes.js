@@ -5,7 +5,7 @@ angular
   // Start: Newly addded Routes Route
   .state('app.create-client', {
     url: '/createclient',
-    templateUrl: 'create-client/create-client.template.html',
+    templateUrl: 'components/create-client/create-client.template.html',
     ncyBreadcrumb: {
       label: 'Create Client'
     },
@@ -15,14 +15,14 @@ angular
       //     return $ocLazyLoad.load([
       //         {
       //             serial: true,
-      //             files: ['js/libs/Chart.min.js', 'js/libs/angular-chart.min.js']
+      //             files: ['assets/libs/Chart.min.js', 'assets/libs/angular-chart.min.js']
       //         }
       //     ]);
       // }],
       loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
         // you can lazy load files for an existing module
         return $ocLazyLoad.load({
-          files: ['../create-client/create-client.controller.js']
+          files: ['components/create-client/create-client.controller.js']
         });
       }]
     }
@@ -30,9 +30,17 @@ angular
 
   .state('app.open-account', {
     url: "/openaccount",
-    templateUrl: 'open-account/open-account.template.html',
+    templateUrl: 'components/open-account/open-account.template.html',
     ncyBreadcrumb: {
       label: 'Open Account'
+    },
+    resolve: {
+      loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+        // you can lazy load files for an existing module
+        return $ocLazyLoad.load({
+          files: ['components/open-account/open-account.controller.js']
+        });
+      }]
     }
   })
 
@@ -128,7 +136,7 @@ angular
       loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
         // you can lazy load controllers
         return $ocLazyLoad.load({
-          files: ['js/controllers/widgets.js']
+          files: ['components/common/controllers/widgets.js']
         });
       }]
     }
@@ -149,14 +157,14 @@ angular
       //     return $ocLazyLoad.load([
       //         {
       //             serial: true,
-      //             files: ['js/libs/Chart.min.js', 'js/libs/angular-chart.min.js']
+      //             files: ['assets/libs/Chart.min.js', 'assets/libs/angular-chart.min.js']
       //         }
       //     ]);
       // }],
       loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
         // you can lazy load files for an existing module
         return $ocLazyLoad.load({
-          files: ['js/controllers/charts.js']
+          files: ['components/common/controllers/charts.js']
         });
       }]
     }
