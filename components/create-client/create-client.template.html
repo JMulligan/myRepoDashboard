@@ -24,9 +24,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-4" ng-controller="datePicker">
             <label for="name">Date of Birth</label>
-            <input type="date" class="form-control" ng-model="client.dateOfBirth">
+            <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" >
           </div>
           <div class="col-sm-4">
             <label for="name">Citizenship</label>
@@ -35,6 +35,14 @@
           <div class="col-sm-4">
             <label for="name">SSN</label>
             <input type="text" class="form-control" ng-model="client.taxid">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4" ng-controller="datePicker">
+            <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+            <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
           </div>
         </div>
       </div>
