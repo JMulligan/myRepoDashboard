@@ -7327,7 +7327,8 @@ base-chart.chart {
   padding-right: 7.5px;
   padding-left: 7.5px;
   margin-right: -15px;
-  margin-left: -15px; }
+  margin-left: -15px;
+  margin-bottom: 15px; }
   .row.row-equal [class*="col-"] {
     padding-right: 7.5px;
     padding-left: 7.5px; }
