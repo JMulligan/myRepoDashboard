@@ -18,6 +18,7 @@ angular
       label: 'Open Account'
     }
   })
+
 // END: Newly addded Routes Route
 
 
