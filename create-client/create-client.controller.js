@@ -9,4 +9,5 @@ function client($scope){
   $scope.lastName = '';
   $scope.citizenship = '';
   $scope.dateOfBirth = new Date();
+  $scope.taxid = '';
 }
