@@ -4,20 +4,46 @@ angular
   $stateProvider
   // Start: Newly addded Routes Route
   .state('app.create-client', {
-    url: "/createclient",
-    templateUrl: 'create-client/create-client.template.html',
+    url: '/createclient',
+    templateUrl: 'components/create-client/create-client.template.html',
     ncyBreadcrumb: {
       label: 'Create Client'
+    },
+    resolve: {
+      // Plugins loaded before
+      // loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
+      //     return $ocLazyLoad.load([
+      //         {
+      //             serial: true,
+      //             files: ['assets/libs/Chart.min.js', 'assets/libs/angular-chart.min.js']
+      //         }
+      //     ]);
+      // }],
+      loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+        // you can lazy load files for an existing module
+        return $ocLazyLoad.load({
+          files: ['components/create-client/create-client.controller.js']
+        });
+      }]
     }
   })
 
   .state('app.open-account', {
     url: "/openaccount",
-    templateUrl: 'open-account/open-account.template.html',
+    templateUrl: 'components/open-account/open-account.template.html',
     ncyBreadcrumb: {
       label: 'Open Account'
+    },
+    resolve: {
+      loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+        // you can lazy load files for an existing module
+        return $ocLazyLoad.load({
+          files: ['components/open-account/open-account.controller.js']
+        });
+      }]
     }
   })
+
 // END: Newly addded Routes Route
 
 
@@ -72,39 +98,7 @@ angular
       label: 'Tables'
     }
   })
-  .state('app.forms', {
-    url: '/forms',
-    templateUrl: 'views/forms.html',
-    ncyBreadcrumb: {
-      label: 'Forms'
-    },
-    resolve: {
-      loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
-        return $ocLazyLoad.load([
-          {
-            serie: true,
-            files: ['js/libs/moment.min.js']
-          },
-          {
-            serie: true,
-            files: ['js/libs/daterangepicker.min.js', 'js/libs/angular-daterangepicker.min.js']
-          },
-          {
-            files: ['js/libs/mask.min.js']
-          },
-          {
-            files: ['js/libs/select.min.js']
-          }
-        ]);
-      }],
-      loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
-        // you can lazy load files for an existing module
-        return $ocLazyLoad.load({
-          files: ['js/controllers/forms.js']
-        });
-      }]
-    }
-  })
+
   // END: Routes for Components
 
   // START: Routes for Icones
@@ -142,7 +136,7 @@ angular
       loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
         // you can lazy load controllers
         return $ocLazyLoad.load({
-          files: ['js/controllers/widgets.js']
+          files: ['components/common/controllers/widgets.js']
         });
       }]
     }
@@ -163,14 +157,14 @@ angular
       //     return $ocLazyLoad.load([
       //         {
       //             serial: true,
-      //             files: ['js/libs/Chart.min.js', 'js/libs/angular-chart.min.js']
+      //             files: ['assets/libs/Chart.min.js', 'assets/libs/angular-chart.min.js']
       //         }
       //     ]);
       // }],
       loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
         // you can lazy load files for an existing module
         return $ocLazyLoad.load({
-          files: ['js/controllers/charts.js']
+          files: ['components/common/controllers/charts.js']
         });
       }]
     }

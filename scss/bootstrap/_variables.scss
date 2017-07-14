@@ -315,7 +315,8 @@ $list-inline-padding: 5px !default;
 $table-cell-padding:            .75rem !default;
 $table-sm-cell-padding:         .3rem !default;
 
-$table-bg:                      transparent !default;
+//$table-bg:                      transparent !default; // removed so table body background color will be white.
+$table-bg:                      $white !default;
 $table-bg-accent:               rgba($black,.05) !default;
 $table-bg-hover:                rgba($black,.075) !default;
 $table-bg-active:               $table-bg-hover !default;

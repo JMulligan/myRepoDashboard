@@ -1,5 +1,5 @@
 {
-  "name": "myDashboard",
+  "name": "mydashboardrepo",
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
@@ -13,7 +13,10 @@
     "fontawesome": "latest",
     "simple-line-icons": "latest",
     "chart.js": "^2.3.0",
-    "angular-chart.js": "^1.0.3"
+    "angular-chart.js": "^1.0.3",
+    "angular-touch": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-bootstrap": "^2.5.0"
   },
   "private": true
 }

@@ -1,0 +1,40 @@
+<div class="animated fadeIn">
+  <div class="card" ng-controller="createClientCtrl">
+    <div class="form-group">
+      <div class="card-header">
+        <strong>Party Demograhic</strong>
+      </div>
+      <div class="card-block">
+        <div class="row">
+          <div class="col-sm-4">
+            <label for="name">First Name</label>
+            <input type="text" class="form-control" ng-model="client.firstName" placeholder="First Name">
+          </div>
+          <div class="col-sm-4">
+            <label for="name">Middle Name</label>
+            <input type="text" class="form-control" ng-model="client.middleName" placeholder="Middle Name">
+          </div>
+          <div class="col-sm-4">
+            <label for="name">Last Name</label>
+            <input type="text" class="form-control" ng-model="client.lastName" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4" ng-controller="datePicker">
+            <label for="name">Date of Birth</label>
+            <input type="text" class="form-control" ng-model="client.dateOfBirth">
+          </div>
+          <div class="col-sm-4">
+            <label for="name">Citizenship</label>
+            <input type="text" class="form-control" ng-model="client.citizenship">
+          </div>
+          <div class="col-sm-4">
+            <label for="name">SSN</label>
+            <input type="text" class="form-control" ng-model="client.taxid">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -27,7 +27,7 @@ gulp.task('serve', ['sass'], function() {
 
     gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch('**/*.html').on('change', browserSync.reload);
-    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('components/**/*.js').on('change', browserSync.reload);
 
 });
 
@@ -40,7 +40,7 @@ gulp.task('serve:lite', function() {
 
     gulp.watch('**/*.css').on('change', browserSync.reload);
     gulp.watch('**/*.html').on('change', browserSync.reload);
-    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('components/**/*.js').on('change', browserSync.reload);
 
 });
 
@@ -61,30 +61,30 @@ gulp.task('clean:dist', function () {
 
 gulp.task('copy:bower', function () {
     return gulp.src(mainBowerFiles(['**/*.js', '!**/*.min.js']))
-        .pipe(gulp.dest(paths.dist+'/js/libs'))
+        .pipe(gulp.dest(paths.dist+'assets/js/libs'))
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(paths.dist+'/js/libs'));
+        .pipe(gulp.dest(paths.dist+'assets/js/libs'));
 });
 
 gulp.task('copy:css', function() {
-   return gulp.src('./css/**/*')
-   .pipe(gulp.dest(paths.dist+'/css'));
+   return gulp.src('.assets/css/**/*')
+   .pipe(gulp.dest(paths.dist+'assets/css'));
 });
 
 gulp.task('copy:img', function() {
-   return gulp.src('./img/**/*')
-   .pipe(gulp.dest(paths.dist+'/img'));
+   return gulp.src('.assets/img/**/*')
+   .pipe(gulp.dest(paths.dist+'assets/img'));
 });
 
 gulp.task('copy:fonts', function() {
-   return gulp.src('./fonts/**/*')
-   .pipe(gulp.dest(paths.dist+'/fonts'));
+   return gulp.src('.assets/fonts/**/*')
+   .pipe(gulp.dest(paths.dist+'assets/fonts'));
 });
 
-gulp.task('copy:js', function() {
-   return gulp.src('./js/**/*')
-   .pipe(gulp.dest(paths.dist+'/js'));
+gulp.task('copy:components', function() {
+   return gulp.src('./components/**/*')
+   .pipe(gulp.dest(paths.dist+'/components'));
 });
 
 gulp.task('copy:views', function() {
@@ -102,7 +102,7 @@ gulp.task('replace:bower', function(){
         './dist/**/*.html',
         './dist/**/*.js',
     ], {base: './'})
-    .pipe(replace(/bower_components+.+(\/[a-z0-9][^/]*\.[a-z0-9]+(\'|\"))/ig, 'js/libs$1'))
+    .pipe(replace(/bower_components+.+(\/[a-z0-9][^/]*\.[a-z0-9]+(\'|\"))/ig, 'assets/js/libs$1'))
     .pipe(gulp.dest('./'));
 });
 
