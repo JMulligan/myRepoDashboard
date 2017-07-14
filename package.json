@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
-    "angular-ui-bootstrap": "^2.5.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1"
   },
