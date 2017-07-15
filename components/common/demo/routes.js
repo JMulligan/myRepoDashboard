@@ -58,42 +58,42 @@ angular
   })
   .state('app.components.buttons', {
     url: '/buttons',
-    templateUrl: 'views/components/buttons.html',
+    templateUrl: 'components/demo-components/buttons.html',
     ncyBreadcrumb: {
       label: 'Buttons'
     }
   })
   .state('app.components.social-buttons', {
     url: '/social-buttons',
-    templateUrl: 'views/components/social-buttons.html',
+    templateUrl: 'components/demo-components/social-buttons.html',
     ncyBreadcrumb: {
       label: 'Social Buttons'
     }
   })
   .state('app.components.cards', {
     url: '/cards',
-    templateUrl: 'views/components/cards.html',
+    templateUrl: 'components/demo-components/cards.html',
     ncyBreadcrumb: {
       label: 'Cards'
     }
   })
   .state('app.components.forms', {
     url: '/forms',
-    templateUrl: 'views/components/forms.html',
+    templateUrl: 'components/demo-components/forms.html',
     ncyBreadcrumb: {
       label: 'Forms'
     }
   })
   .state('app.components.switches', {
     url: '/switches',
-    templateUrl: 'views/components/switches.html',
+    templateUrl: 'components/demo-components/switches.html',
     ncyBreadcrumb: {
       label: 'Switches'
     }
   })
   .state('app.components.tables', {
     url: '/tables',
-    templateUrl: 'views/components/tables.html',
+    templateUrl: 'components/demo-components/tables.html',
     ncyBreadcrumb: {
       label: 'Tables'
     }
@@ -112,14 +112,14 @@ angular
   })
   .state('app.icons.fontawesome', {
     url: '/font-awesome',
-    templateUrl: 'views/icons/font-awesome.html',
+    templateUrl: 'components/demo-icons/font-awesome.html',
     ncyBreadcrumb: {
       label: 'Font Awesome'
     }
   })
   .state('app.icons.simplelineicons', {
     url: '/simple-line-icons',
-    templateUrl: 'views/icons/simple-line-icons.html',
+    templateUrl: 'components/demo-icons/simple-line-icons.html',
     ncyBreadcrumb: {
       label: 'Simple Line Icons'
     }
@@ -128,7 +128,7 @@ angular
   // START: Routes for Widgets
   .state('app.widgets', {
     url: '/widgets',
-    templateUrl: 'views/widgets.html',
+    templateUrl: 'components/demo-widgets/widgets.html',
     ncyBreadcrumb: {
       label: 'Widgets'
     },
@@ -147,7 +147,7 @@ angular
   // START: Routes for charts
   .state('app.charts', {
     url: '/charts',
-    templateUrl: 'views/charts.html',
+    templateUrl: 'components/demo-charts/charts.html',
     ncyBreadcrumb: {
       label: 'Charts'
     },

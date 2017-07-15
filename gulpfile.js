@@ -87,10 +87,11 @@ gulp.task('copy:components', function() {
    .pipe(gulp.dest(paths.dist+'/components'));
 });
 
-gulp.task('copy:views', function() {
-   return gulp.src('./views/**/*')
-   .pipe(gulp.dest(paths.dist+'/views'));
-});
+// May not be needed since we copy components
+// gulp.task('copy:views', function() {
+//    return gulp.src('./views/**/*')
+//    .pipe(gulp.dest(paths.dist+'/views'));
+// });
 
 gulp.task('copy:html', function() {
    return gulp.src('index.html')
