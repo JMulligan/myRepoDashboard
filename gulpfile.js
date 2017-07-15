@@ -47,7 +47,7 @@ gulp.task('serve:lite', function() {
 gulp.task('sass', function () {
     return gulp.src('./scss/style.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./assets/css'))
         .pipe(browserSync.stream());
 });
 
@@ -68,17 +68,17 @@ gulp.task('copy:bower', function () {
 });
 
 gulp.task('copy:css', function() {
-   return gulp.src('.assets/css/**/*')
+   return gulp.src('./assets/css/**/*')
    .pipe(gulp.dest(paths.dist+'assets/css'));
 });
 
 gulp.task('copy:img', function() {
-   return gulp.src('.assets/img/**/*')
+   return gulp.src('./assets/img/**/*')
    .pipe(gulp.dest(paths.dist+'assets/img'));
 });
 
 gulp.task('copy:fonts', function() {
-   return gulp.src('.assets/fonts/**/*')
+   return gulp.src('./assets/fonts/**/*')
    .pipe(gulp.dest(paths.dist+'assets/fonts'));
 });
 
@@ -87,10 +87,11 @@ gulp.task('copy:components', function() {
    .pipe(gulp.dest(paths.dist+'/components'));
 });
 
-gulp.task('copy:views', function() {
-   return gulp.src('./views/**/*')
-   .pipe(gulp.dest(paths.dist+'/views'));
-});
+// May not be needed since we copy components
+// gulp.task('copy:views', function() {
+//    return gulp.src('./views/**/*')
+//    .pipe(gulp.dest(paths.dist+'/views'));
+// });
 
 gulp.task('copy:html', function() {
    return gulp.src('index.html')

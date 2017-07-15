@@ -18,7 +18,7 @@ angular
   $stateProvider
   .state('app', {
     abstract: true,
-    templateUrl: 'views/common/layouts/full.html',
+    templateUrl: 'components/common/layouts/full.html',
     //page title goes here
     ncyBreadcrumb: {
       label: 'Root',
@@ -30,11 +30,11 @@ angular
         return $ocLazyLoad.load([{
           serie: true,
           name: 'Font Awesome',
-          files: ['css/font-awesome.min.css']
+          files: ['assets/css/font-awesome.min.css']
         },{
           serie: true,
           name: 'Simple Line Icons',
-          files: ['css/simple-line-icons.css']
+          files: ['assets/css/simple-line-icons.css']
         }]);
       }],
       loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
@@ -52,7 +52,7 @@ angular
   })
   .state('app.main', {
     url: '/dashboard',
-    templateUrl: 'views/main.html',
+    templateUrl: 'components/dashboard/main.html',
     //page title goes here
     ncyBreadcrumb: {
       label: 'Home',
@@ -83,18 +83,18 @@ angular
   })
   .state('appSimple', {
     abstract: true,
-    templateUrl: 'views/common/layouts/simple.html',
+    templateUrl: 'components/common/pages/layouts/simple.html',
     resolve: {
       loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
         // you can lazy load files for an existing module
         return $ocLazyLoad.load([{
           serie: true,
           name: 'Font Awesome',
-          files: ['css/font-awesome.min.css']
+          files: ['assets/css/font-awesome.min.css']
         },{
           serie: true,
           name: 'Simple Line Icons',
-          files: ['css/simple-line-icons.css']
+          files: ['assets/css/simple-line-icons.css']
         }]);
       }],
     }
@@ -103,18 +103,18 @@ angular
   // Additional Pages
   .state('appSimple.login', {
     url: '/login',
-    templateUrl: 'views/pages/login.html'
+    templateUrl: 'components/common/views/pages/login.html'
   })
   .state('appSimple.register', {
     url: '/register',
-    templateUrl: 'views/pages/register.html'
+    templateUrl: 'components/common/views/pages/register.html'
   })
   .state('appSimple.404', {
     url: '/404',
-    templateUrl: 'views/pages/404.html'
+    templateUrl: 'components/common/views/pages/404.html'
   })
   .state('appSimple.500', {
     url: '/500',
-    templateUrl: 'views/pages/500.html'
+    templateUrl: 'components/common/views/pages/500.html'
   })
 }]);
