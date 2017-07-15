@@ -1,59 +1,69 @@
-<div class="row">
-  <div class="col-lg-12">
-    <div class="card">
+
+<div class="animated fadeIn">
+  <div class="card" ng-controller="openAccountCtrl as account">
+    <form name="accountDetails">
+    <div class="form-group">
       <div class="card-header">
-        Open Account
-        <div class="card-actions">
-          <a href="#" class="btn-setting"><i class="icon-settings"></i></a>
-          <a href="#" class="btn-minimize"><i class="icon-arrow-up"></i></a>
-          <a href="#" class="btn-close"><i class="icon-close"></i></a>
-        </div>
+        <strong>Account Details </strong>
       </div>
       <div class="card-block">
-        <form class="form-2orizontal">
-          <div class="form-group">
-            <label for="company">Company</label>
-            <input type="text" class="form-control" id="company" placeholder="Enter your company name">
+        <div class="row">
+          <div class="col-sm-8">
+            <label for="title">Account Title </label>
+            <input type="text" name="title" class="form-control" ng-model="account.title" placeholder="Account Title" required="true">
+          
           </div>
-
-          <div class="form-group">
-            <label for="vat">VAT</label>
-            <input type="text" class="form-control" id="vat" placeholder="PL1234567890">
+        </div>
+        <div class="row">
+        
+          <div class="col-sm-4">
+            <label cfor="type">Account Type</label>
+                            
+                                <select required="true" id="type" name="type" ng-model="account.type"  class="form-control form-control-sm" >
+                                    <option value="">Please select</option>
+                                    <option value="savings">Savings</option>
+                                    <option value="checking">Checking</option>
+                                    <option value="investments">Investments</option>
+                                    <option value="loans">Loans</option>
+                                </select>
+                        
           </div>
-
-          <div class="form-group">
-            <label for="street">Street</label>
-            <input type="text" class="form-control" id="street" placeholder="Enter street name">
+                          
+          <div class="col-sm-4">
+            <label for="subtype">Subtype</label>
+            <select id="subtype" name="subtype" ng-model="account.subType"  class="form-control form-control-sm">
+                                    <option value="">Please select</option>
+                                    <option value="1">Option #1</option>
+                                    <option value="2">Option #2</option>
+                                    <option value="3">Option #3</option>
+                                </select>
           </div>
+        </div>
+        <div class="row">
 
-          <div class="row">
+          <div class="col-sm-4">
+            <label for="name">Booking Country</label>
+            
+              <country-select class="form-control form-control-sm" cs-priorities="US" ng-model="account.region"></country-select>
 
-            <div class="form-group col-sm-8">
-              <label for="city">City</label>
-              <input type="text" class="form-control" id="city" placeholder="Enter your city">
-            </div>
-
-            <div class="form-group col-sm-4">
-              <label for="postal-code">Postal Code</label>
-              <input type="text" class="form-control" id="postal-code" placeholder="Postal Code">
-            </div>
-
+            <!--<input type="text" name="region" ng-model="account.region "class="form-control" required="true">-->
           </div>
-          <!--/.row-->
-
-          <div class="form-group">
-            <label for="country">Country</label>
-            <input type="text" class="form-control" id="country" placeholder="Country name">
+          <div class="col-sm-4">
+            <label for="estimatedAUM">Estimated AUM</label>
+            <input type="text" name="estimatedAUM" class="form-control" ng-model="acount.estimatedAUM">
           </div>
+          <div class="col-sm-4" ng-controller="datePicker">
+            <label for="currency">Currency</label>
+            <input type="text"  name="currency" class="form-control" ng-model="account.currency">
+          </div>
+        </div>
+
       </div>
     </div>
+    <div  style="float:right; margin:5px">
+    <input class="btn-success" type="submit" id="btnsubmit" value="Next" ui-sref="app.create-client" />
+    </div>
+    </form>
+
   </div>
 </div>
-
-
-
-
-
-
-
-<!--  -->
