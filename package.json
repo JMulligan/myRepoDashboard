@@ -8,7 +8,8 @@
     "angular-touch": "^1.6.5",
     "angular-ui-bootstrap": "^2.5.0",
     "del": "^2.2.2",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "ng-country-select": "^0.1.4"
   },
   "devDependencies": {
     "browser-sync": "^2.16.0",

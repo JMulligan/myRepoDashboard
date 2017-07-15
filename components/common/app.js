@@ -19,7 +19,8 @@ angular
   'angular-loading-bar',
   'ngAnimate',
   'ngTouch',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'countrySelect'
 ])
 .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
   cfpLoadingBarProvider.includeSpinner = false;
