@@ -108,7 +108,7 @@
             <tr ng-repeat="user in users">
               <td class="text-center">
                 <div class="avatar">
-                  <img ng-src="img/avatars/{{ user.avatar }}" class="img-avatar" alt="admin@bootstrapmaster.com">
+                  <img ng-src="assets/img/avatars/{{ user.avatar }}" class="img-avatar" alt="admin@bootstrapmaster.com">
                   <span class="avatar-status" ng-class="{ 'badge-success' : user.status == 'active',
               'badge-warning' : user.status == 'away',
               'badge-danger'  : user.status == 'busy',
@@ -122,7 +122,7 @@
                   <span ng-if="user.new == false">Recurring</span> | Registered: {{ user.registered }}</div>
               </td>
               <td class="text-center">
-                <img ng-src="img/flags/{{ user.flag }}" alt="{{ user.country }}" style="height:24px;">
+                <img ng-src="assets/img/flags/{{ user.flag }}" alt="{{ user.country }}" style="height:24px;">
               </td>
               <td>
                 <div class="clearfix">
@@ -157,7 +157,7 @@
           </tbody>
         </table>
         <br/>
-        
+
       </br/>
       </div>
     </div>
